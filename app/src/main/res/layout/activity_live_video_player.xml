@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:keepScreenOn="true">
+
+        <include
+            android:id="@+id/live_play_view"
+            layout="@layout/play_video_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="42dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <ImageButton
+                android:id="@+id/imgButtonOneFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_like"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/imgButtonTwoFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_heart" />
+
+            <ImageButton
+                android:id="@+id/imgButtonThreeFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_happy" />
+
+            <ImageButton
+                android:id="@+id/imgButtonFourFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_surprise" />
+
+            <ImageButton
+                android:id="@+id/imgButtonFiveFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_sad" />
+
+            <ImageButton
+                android:id="@+id/imgButtonSixFly"
+                style="@style/ReactImageButton"
+                android:layout_gravity="start"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_angry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#80000000"
+            android:backgroundTintMode="src_atop"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top_bar"
+                    layout="@layout/layout_live_top_bar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/userHistoryView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/my_button"
+                        android:elevation="0dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/diamond" />
+
+                        <TextView
+                            android:id="@+id/liveUserDiamond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/my_button"
+                        android:elevation="0dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/eye"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/liveUserView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/_0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!--
+                            <Button
+                                android:id="@+id/toggle_broadcasting"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginVertical="5dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:background="@drawable/my_button2"
+                                android:backgroundTint="@color/button"
+                                android:onClick="toggleBroadcasting_play"
+                                android:text="Live"
+                                android:textColor="@color/white"
+
+                                />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4.9"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/gift_5_diamond_animation"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/lip"
+                            android:visibility="gone"
+                            tools:ignore="MissingConstraints" />
+
+
+                        <ImageView
+                            android:id="@+id/gift_10_diamond_animation"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/apple"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+
+                        <ImageView
+                            android:id="@+id/gift_20_diamond_animation"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/parrot"
+                            android:visibility="gone"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:id="@+id/gift_50_diamond_animation"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/cat"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@id/gift_10_diamond_animation"
+                            app:layout_constraintLeft_toRightOf="@id/gift_5_diamond_animation"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/messageShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/layout_comment" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+
+                        <ImageButton
+                            android:id="@+id/btn_video_off"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/calling_button_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/ic_baseline_videocam_off_24"
+                            app:tint="@color/white"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageButton
+                            android:id="@+id/btn_mute_call"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/calling_button_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/ic_mic_call_white"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageButton
+                            android:id="@+id/changeCameraButton"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="3dp"
+                            android:background="@drawable/calling_button_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="changeAudienceCamera"
+                            android:src="@drawable/ic_baseline_flip_camera_ios_24"
+                            app:tint="@color/white"
+                            tools:ignore="ContentDescription" />
+
+
+                        <ImageView
+                            android:id="@+id/share_video"
+                            android:layout_width="35dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:src="@drawable/share2"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <com.nex3z.notificationbadge.NotificationBadge
+                                android:id="@+id/badge"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                app:nbEllipsizeText="99+"
+                                app:nbMaxTextLength="2" />
+
+                            <TextView
+                                android:id="@+id/join_playLive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/my_button"
+                                android:paddingHorizontal="20dp"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:text="@string/join"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/giftLiveUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:src="@drawable/gift"
+                            android:visibility="visible" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            app:cardBackgroundColor="@color/colorPrimary"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="10dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/love"
+                                    app:tint="@color/white"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+                                    android:id="@+id/countLove"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10dp"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/bottom_bar"
+                layout="@layout/layout_live_bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_gift_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_80sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_live_ended"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/background_live_section"
+            android:gravity="center"
+            android:text="@string/live_ended"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <include layout="@layout/bottom_navigation_join" />
+
+        <include layout="@layout/bottom_navigation_gift" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#0097A7</color>
+    <color name="colorAccent">#F57C00</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="button">#03DAC6</color>
+    <color name="greenOp">#018786</color>
+    <color name="text">#4C4C4C</color>
+    <color name="leave">#E74C3C</color>
+    <color name="colorItemBackground">#66202020</color>
+    <color name="text_color_dark">#323232</color>
+    <color name="text_color_light">#757575</color>
+    <color name="colorViewBackground">#f6f6f6</color>
+    <color name="placeHolderColor">#D8D6D6</color>
+    <color name="colorCallButton">#59E6E6E6</color>
+
+    <color name="green">#E64CAF50</color>
+    <color name="red">#E6F44336</color>
+    <color name="redOverlay">#B3F44336</color>
+
+    <color name="viewColor">#DADADA</color>
+
+
+    <color name="setting_tab_color">#656464</color>
+
+
+</resources>

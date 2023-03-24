@@ -1,0 +1,138 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Shopno Live</string>
+    <string name="live_indicator">on-air</string>
+    <string name="start_broadcasting">Start Live</string>
+    <string name="stream_name">Stream Name</string>
+    <string name="nocamera">No camera exists in your device</string>
+    <string name="camera_not_running_properly">Camera is not running properly</string>
+    <string name="restart">Restart</string>
+    <string name="streaming_not_finished">Your previous broadcast still sends packets due to slow internet speed</string>
+    <string name="oopps_shouldnt_happen">Oopps this shouldn\'t be happened. Please let the library developer this status</string>
+    <string name="broadcast_connection_lost">Connection to media server is lost</string>
+    <string name="low_bandwidth">Network speed is low. Latency is increasing.</string>
+    <string name="not_eligible_for_broadcast">Your device is not eligible to broadcast. There is no hardware encoder.</string>
+    <string name="no_network_connectivity">You\'re not connected to any network. Please connect to Internet</string>
+    <string name="stop_broadcasting">LEAVE</string>
+    <string name="camera_permission_is_required">Camera permission is required to run this app</string>
+    <string name="microphone_permission_is_required">Microphone permission is required to run this app</string>
+    <string name="permission">Permission</string>
+    <string name="app_doesnot_work_without_permissions">App does not work without permissions. Please give Camera and Record Audio permission on app settings</string>
+
+
+    <string name="video">Video</string>
+
+    <string name="audio">Audio</string>
+
+    <string name="text">Text</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="selection_disabled">Disabled</string>
+
+    <string name="selection_default">Default</string>
+
+    <string name="selection_default_none">Default (none)</string>
+
+    <string name="unexpected_intent_action">Unexpected intent action: <xliff:g id="action">%1$s</xliff:g></string>
+
+    <string name="enable_random_adaptation">Enable random adaptation</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="sample_list_load_error">One or more sample lists failed to load</string>
+    <string name="stream_not_started">Failed to start. Please check server url and security credentials.</string>
+
+    <string name="payment">Add a payment method to complete purchase. Your payment information is only visible to Google.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="diamond_emoji">💎</string>
+    <string name="_0">0</string>
+    <string name="purchase">Purchase</string>
+    <string name="settings">Edit Profile</string>
+    <string name="share_famous_live">Share App</string>
+    <string name="help_amp_feedback"><![CDATA[Help & Feedback]]></string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_the_otp_code_you_received_via_sms">Enter the OTP code you received via sms</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="send">Send</string>
+    <string name="delete">Delete</string>
+    <string name="are_you_sure_to_delete_your_account">Are you sure to delete your account?</string>
+    <string name="live_ended">Live Ended</string>
+    <string name="block">Block</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="join">Join</string>
+    <string name="error_no_internet">No Internet Connection</string>
+    <string name="error_something_went_wrong">Something went wrong</string>
+    <string name="error_permission_required">Permissions Required</string>
+    <string name="live">Live</string>
+    <string name="write_your_comment">Write your comment</string>
+    <string name="add">Add</string>
+    <string name="home">Home</string>
+    <string name="chat">Chat</string>
+    <string name="person">Person</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="ludo_game_with_friends">Ludo game with friends</string>
+    <string name="news_feed">Search</string>
+    <string name="update">Update</string>
+    <string name="not_now">Not now</string>
+    <string name="okay">Okay</string>
+    <string name="click_here_to_start_live">Click here to start live</string>
+    <string name="add_story">Add Story</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="demo_user">Demo user</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_wait">Please wait</string>
+    <string name="empty">Empty</string>
+    <string name="report">Report</string>
+    <string name="title_activity_audio_call">AudioCallActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="enter_your_message">Enter your message</string>
+    <string name="your_account_is_temporary_banned_please_try_again_later_or_contact_with_admin">Your account is temporary banned. Please try again later or contact with admin</string>
+    <string name="create_new_group">Create New Group</string>
+    <string name="upload_group_image">Upload Group Image</string>
+    <string name="group_name">Group name</string>
+    <string name="enter_group_name">Enter group name</string>
+    <string name="add_member">Add Member</string>
+    <string name="leave_group">Leave Group</string>
+    <string name="remove">Remove</string>
+    <string name="done">Done</string>
+    <string name="follow" >Follow</string>
+    <string name="unblock">Unblock</string>
+    <string name="shopno_live">LIVE</string>
+</resources>

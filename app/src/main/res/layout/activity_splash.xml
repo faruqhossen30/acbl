@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.intro.SplashActivity">
+
+    <ImageView
+        android:id="@+id/image_splash"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"
+        android:src="@drawable/app_icon"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/image_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shopno_live"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="#F60836"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        >
+
+    </TextView>
+
+</RelativeLayout>

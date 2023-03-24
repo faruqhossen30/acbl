@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shopnolive.shopnolive">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.shopnolive.shopnolive.FamousLiveApp"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.GroupInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.AddMemberActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.CreateChatGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.GroupMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.activities.BannedActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.shopnolive.shopnolive.services.FCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.PersonalMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.activities.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ppal.calling.CallingScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ppal.calling.VideoCallActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ppal.calling.AudioCallActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.statusCheck.StatusCheckActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ppal.chat.ChattingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.chat.MessageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.live.PlayBroadcastActivity"
+            android:configChanges="smallestScreenSize|orientation|screenSize|screenLayout"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeDark"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopnolive.shopnolive.otp.OTPPhoneNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.user.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.live.LiveBroadcastActivity"
+            android:configChanges="smallestScreenSize|orientation|screenSize|screenLayout"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeDark"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.main.HomeActivity"
+            android:exported="false" /> <!-- <activity android:name="com.bdlive.devboyz.activity.ConferenceActivity"></activity> -->
+        <activity
+            android:name="com.shopnolive.shopnolive.otp.OTPCodeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopnolive.shopnolive.ui.intro.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopnolive.shopnolive.activity.OpenStoryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.shopnolive.shopnolive.activity.main.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="https://bdliveapp.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopnolive.shopnolive.activity.AccountSettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.shopnolive.shopnolive.activity.UserOptionsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.shopnolive.shopnolive.liveVideoPlayer.LiveVideoBroadcasterActivity"
+            android:configChanges="smallestScreenSize|orientation|screenSize|screenLayout"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeDark"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <!--
+              <intent-filter android:label="@string/app_name">
+                  <action android:name="android.intent.action.VIEW" />
+                  <category android:name="android.intent.category.DEFAULT" />
+                  <category android:name="android.intent.category.BROWSABLE" />
+
+                  <data android:scheme="http"
+                      android:host="www.example.com"
+                      android:pathPrefix="/gizmos" />
+              </intent-filter>
+
+              <intent-filter>
+                  <action android:name="android.intent.action.VIEW" />
+                  <category android:name="android.intent.category.DEFAULT" />
+                  <category android:name="android.intent.category.BROWSABLE" />
+
+                  <data android:scheme="example"
+                      android:host="gizmos" />
+
+              </intent-filter>
+        -->
+        <activity
+            android:name="com.shopnolive.shopnolive.liveVideoPlayer.LiveVideoPlayerActivity"
+            android:configChanges="smallestScreenSize|orientation|screenSize|screenLayout"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppThemeDark"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

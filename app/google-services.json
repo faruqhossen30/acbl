@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391804088400",
+    "project_id": "live-49410",
+    "storage_bucket": "live-49410.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391804088400:android:f5e961d43a3d55246de155",
+        "android_client_info": {
+          "package_name": "com.shopnolive.shopnolive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391804088400-udcnt58o2j6kusae5kq75v8tp0r0lgmu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shopnolive.shopnolive",
+            "certificate_hash": "fcfd2be84ad901c1732727d9f94c7466fa9ce07b"
+          }
+        },
+        {
+          "client_id": "391804088400-41gqe58cbo8r55cp0j4evor5dkeaepus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDisRXBrpghLdQMK08v0H5v1BybUAl75QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391804088400-41gqe58cbo8r55cp0j4evor5dkeaepus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,166 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+
+        applicationId "com.shopnolive.shopnolive"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 4
+        versionName "1.3"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        pickFirst "**/lib/**"
+    }
+
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+}
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.google.firebase:firebase-messaging:23.0.2'
+/*
+    implementation project(path: ':webrtc-android-framework')
+*/
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0',
+            {
+                exclude group: 'com.android.support', module: 'support-annotations'
+            })
+
+    //Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-analytics:19.0.2'
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
+    implementation 'com.google.firebase:firebase-database:20.0.2'
+    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.google.firebase:firebase-functions:20.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+    //noinspection GradleCompatible
+    /*implementation 'com.android.support:appcompat-v7:30.0.0'*/
+//    implementation 'net.butterflytv.utils:rtmp-client:3.1.0'
+
+
+    implementation project(path: ':webrtcframework')
+    implementation 'junit:junit:4.13.2'
+
+    implementation 'com.hbb20:ccp:2.4.0'
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
+
+    //All Mobile Size Fixed
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // Number Verification
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.8'
+
+    //image cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Retrofit
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    // For developers using AndroidX in their applications
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //for pinview
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'id.zelory:compressor:2.1.0'
+
+
+    def lifecycle_version = "2.2.0"
+    def arch_version = "2.1.0"
+
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+    // optional - Test helpers for LiveData
+    testImplementation "androidx.arch.core:core-testing:$arch_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
+    implementation 'com.nex3z:notification-badge:1.0.4'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'androidx.browser:browser:1.2.0'
+
+    //shimmer effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //for glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'io.agora.rtc:full-sdk:3.5.2'
+    //lottie
+    implementation 'com.airbnb.android:lottie:3.4.4'
+    implementation 'com.github.clans:fab:1.6.4'
+
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:visibility="visible">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/background_gift_history">
+
+                <EditText
+                    android:id="@+id/edit_text_comment"
+                    android:layout_width="220dp"
+                    android:layout_height="42dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:hint="@string/write_your_comment"
+                    android:maxLength="150"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:scrollHorizontally="false"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/send_button_comment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                <ImageView
+                    android:id="@+id/send_button_comment"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/edit_text_comment"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_send"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/reactLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_share"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/calling_button_background"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_baseline_share_24_white"
+                    tools:ignore="ContentDescription" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_gift"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/calling_button_background_custom"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/gift"
+                    tools:ignore="ContentDescription" />
+
+
+                <RelativeLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_call"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/calling_button_background_custom3"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_baseline_call_24"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/badge"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_alignTop="@id/btn_call"
+                        android:layout_alignStart="@id/btn_call"
+                        android:background="@drawable/badge_circle"
+                        android:backgroundTint="@color/red"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+
+                <ImageButton
+                    android:id="@+id/btn_like"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    app:srcCompat="@drawable/ic_like"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_love"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    app:srcCompat="@drawable/ic_heart"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_haha"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_happy"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_wow"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_surprise"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_sad"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    app:srcCompat="@drawable/ic_sad"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/btn_angry"
+                    style="@style/ReactImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="0dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_angry"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>
